@@ -1,16 +1,16 @@
 import {
-  FlagIcon,
-  PlayIcon,
-  SearchIcon,
-  ShoppingCartIcon,
+    FlagIcon,
+    PlayIcon,
+    SearchIcon,
+    ShoppingCartIcon
 } from "@heroicons/react/outline";
 import {
-  BellIcon,
-  ChatIcon,
-  ChevronDownIcon,
-  HomeIcon,
-  UserGroupIcon,
-  ViewGridIcon,
+    BellIcon,
+    ChatIcon,
+    ChevronDownIcon,
+    HomeIcon,
+    UserGroupIcon,
+    ViewGridIcon
 } from "@heroicons/react/solid";
 import type { NextPage } from "next";
 import Image from "next/image";
@@ -71,10 +71,10 @@ const Header: NextPage = () => {
         <Image />
 
         <p className="font-semibold pr-3 whitespace-nowrap">Erys Mozo</p>
-        <ViewGridIcon />
-        <ChatIcon />
-        <BellIcon />
-        <ChevronDownIcon />
+        <ViewGridIcon className="icon" />
+        <ChatIcon className="icon" />
+        <BellIcon className="icon" />
+        <ChevronDownIcon className="icon" />
       </div>
     </header>
   );
