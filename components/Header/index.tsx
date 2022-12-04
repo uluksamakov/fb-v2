@@ -25,7 +25,7 @@ const Header: NextPage = () => {
     ]
 
   return (
-    <header className="">
+    <header className="sticky top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md">
         {/* LEFT */}
       <div className="flex items-center">
         <Image
@@ -36,13 +36,13 @@ const Header: NextPage = () => {
         />
         <div className="flex items-center rounded-full bg-gray-100 p-2">
             <SearchIcon className="h-6 text-gray-600" />
-            <input type="text" className="flex ml-2 items-center bg-transparent outline-none placeholder-gray-500" placeholder="Search Facebook" />
+            <input type="text" className="flex ml-2 items-center bg-transparent outline-none placeholder-gray-500 flex-shrink" placeholder="Search Facebook" />
         </div>
       </div>
 
     {/* MID */}
     <div className="flex justify-center flex-grow">
-        <div>
+        <div className="flex space-x-6 md:space-x-2">
             {icons.map(icon => (
                 <HeaderIcon Icon={icon.icon} />
             ))}
