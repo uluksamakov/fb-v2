@@ -17,6 +17,7 @@ const Layout: NextPage<Props> = ({ children }) => {
         />
         <meta name="author" content="Erys Mozo | @ErysCode7" />
         <title>Facebook</title>
+        <link rel="shortcut icon" href="/images/facebook-logo.png" type="image/x-icon" />
       </Head>
       <div>{children}</div>
     </>
