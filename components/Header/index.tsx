@@ -1,22 +1,26 @@
 import {
-    FlagIcon,
-    PlayIcon,
-    SearchIcon,
-    ShoppingCartIcon
+  FlagIcon,
+  PlayIcon,
+  SearchIcon,
+  ShoppingCartIcon,
 } from "@heroicons/react/outline";
 import {
-    BellIcon,
-    ChatIcon,
-    ChevronDownIcon,
-    HomeIcon,
-    UserGroupIcon,
-    ViewGridIcon
+  BellIcon,
+  ChatIcon,
+  ChevronDownIcon,
+  HomeIcon,
+  UserGroupIcon,
+  ViewGridIcon,
 } from "@heroicons/react/solid";
 import type { NextPage } from "next";
 import Image from "next/image";
 import HeaderIcon from "./components/HeaderIcon/";
 
 const Header: NextPage = () => {
+  // const { data: session } = useSession();
+
+  // const { name, image }: any = session?.user;
+
   const icons = [
     {
       icon: HomeIcon,
@@ -59,8 +63,8 @@ const Header: NextPage = () => {
       {/* MID */}
       <div className="flex justify-center flex-grow">
         <div className="flex space-x-6 md:space-x-2">
-          {icons.map((icon) => (
-            <HeaderIcon Icon={icon.icon} active={icon.active} />
+          {icons.map((icon, idx) => (
+            <HeaderIcon Icon={icon.icon} active={icon.active} key={idx} />
           ))}
         </div>
       </div>
@@ -68,9 +72,16 @@ const Header: NextPage = () => {
       {/* Right */}
       <div className="flex items-center sm:space-x-2 justify-end">
         {/* Profile pic */}
-        <Image />
+        {/* <Image
+          src={image}
+          width={40}
+          height={40}
+          alt={name}
+          className="rounded-full cursor-pointer"
+          onClick={() => signOut()}
+        /> */}
 
-        <p className="font-semibold pr-3 whitespace-nowrap">Erys Mozo</p>
+        <p className="font-semibold pr-3 whitespace-nowrap">{}</p>
         <ViewGridIcon className="icon" />
         <ChatIcon className="icon" />
         <BellIcon className="icon" />
