@@ -2,7 +2,7 @@ import {
   FlagIcon,
   PlayIcon,
   SearchIcon,
-  ShoppingCartIcon,
+  ShoppingCartIcon
 } from "@heroicons/react/outline";
 import {
   BellIcon,
@@ -10,16 +10,15 @@ import {
   ChevronDownIcon,
   HomeIcon,
   UserGroupIcon,
-  ViewGridIcon,
+  ViewGridIcon
 } from "@heroicons/react/solid";
 import type { NextPage } from "next";
+import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import HeaderIcon from "./components/HeaderIcon/";
 
 const Header: NextPage = () => {
-  // const { data: session } = useSession();
-
-  // const { name, image }: any = session?.user;
+  const { data: session } = useSession();
 
   const icons = [
     {
@@ -50,7 +49,7 @@ const Header: NextPage = () => {
           height={40}
           alt="Facebook logo"
         />
-        <div className="flex items-center rounded-full bg-gray-100 p-2">
+        <div className="flex  items-center rounded-full bg-gray-100 p-2 ml-2">
           <SearchIcon className="h-6 text-gray-600" />
           <input
             type="text"
@@ -72,16 +71,19 @@ const Header: NextPage = () => {
       {/* Right */}
       <div className="flex items-center sm:space-x-2 justify-end">
         {/* Profile pic */}
-        {/* <Image
-          src={image}
+        <Image
+          src={session?.user?.image || "/"}
           width={40}
           height={40}
-          alt={name}
+          alt={session?.user?.name || " "}
           className="rounded-full cursor-pointer"
           onClick={() => signOut()}
-        /> */}
+          priority
+        />
 
-        <p className="font-semibold pr-3 whitespace-nowrap">{}</p>
+        <p className="font-semibold pr-3 whitespace-nowrap">
+          {session?.user?.name}
+        </p>
         <ViewGridIcon className="icon" />
         <ChatIcon className="icon" />
         <BellIcon className="icon" />

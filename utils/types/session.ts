@@ -1,9 +1,4 @@
 export type Session = {
-  session: SessionValue;
-};
-
-export type SessionValue = {
-  expires: string | null | undefined;
   user: User;
 };
 
