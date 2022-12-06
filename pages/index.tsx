@@ -1,12 +1,22 @@
 import type { GetServerSideProps, NextPage } from "next";
 import { getSession } from "next-auth/react";
-import { Header } from "../components";
+import { Header, Sidebar } from "../components";
 import { Session } from "../utils/types/session";
 
 const Home: NextPage<Session> = ({ user }) => {
-  console.log(user);
-
-  return <>{user && <Header />}</>;
+  return (
+    <>
+      {user && (
+        <>
+          <Header />
+          {/* MAIN CONTENTS */}
+          <main className="flex">
+            <Sidebar />
+          </main>
+        </>
+      )}
+    </>
+  );
 };
 
 export default Home;

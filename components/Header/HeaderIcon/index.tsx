@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
-
-type HeroIcon = (props: React.ComponentProps<"svg">) => JSX.Element;
+import { HeroIcon } from "../../../utils/types/heroIcon";
 
 type Props = {
   Icon: HeroIcon;

@@ -2,7 +2,7 @@ import {
   FlagIcon,
   PlayIcon,
   SearchIcon,
-  ShoppingCartIcon
+  ShoppingCartIcon,
 } from "@heroicons/react/outline";
 import {
   BellIcon,
@@ -10,12 +10,12 @@ import {
   ChevronDownIcon,
   HomeIcon,
   UserGroupIcon,
-  ViewGridIcon
+  ViewGridIcon,
 } from "@heroicons/react/solid";
 import type { NextPage } from "next";
 import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
-import HeaderIcon from "./components/HeaderIcon/";
+import HeaderIcon from "./HeaderIcon";
 
 const Header: NextPage = () => {
   const { data: session } = useSession();
