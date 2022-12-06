@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Stories from "./components/Stories";
+import { InputBox, Stories } from "./components";
 
 const Feed: NextPage = () => {
   return (
@@ -8,6 +8,7 @@ const Feed: NextPage = () => {
         {/* STORIES */}
         <Stories />
         {/* INPUT BOX */}
+        <InputBox />
         {/* POST */}
       </div>
     </div>
