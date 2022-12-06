@@ -18,6 +18,7 @@ const SidebarRow: NextPage<Props> = ({ Icon, title, src }) => {
           width={30}
           height={30}
           alt="User image"
+          priority
         />
       )}
       {Icon && <Icon className="h-8 w-8 text-blue-500" />}

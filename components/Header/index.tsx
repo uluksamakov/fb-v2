@@ -48,6 +48,7 @@ const Header: NextPage = () => {
           width={40}
           height={40}
           alt="Facebook logo"
+          priority
         />
         <div className="flex  items-center rounded-full bg-gray-100 p-2 ml-2">
           <SearchIcon className="h-6 text-gray-600" />

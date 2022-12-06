@@ -1,19 +1,20 @@
 import type { GetServerSideProps, NextPage } from "next";
 import { getSession } from "next-auth/react";
-import { Header, Sidebar } from "../components";
+import { Feed, Header, Sidebar } from "../components";
 import { Session } from "../utils/types/session";
 
 const Home: NextPage<Session> = ({ user }) => {
   return (
     <>
       {user && (
-        <>
+        <div className="h-screen bg-gray-100 overflow-hidden">
           <Header />
           {/* MAIN CONTENTS */}
           <main className="flex">
             <Sidebar />
+            <Feed />
           </main>
-        </>
+        </div>
       )}
     </>
   );
