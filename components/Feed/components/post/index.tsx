@@ -1,5 +1,5 @@
+import { ChatAltIcon, ShareIcon, ThumbUpIcon } from "@heroicons/react/outline";
 import type { NextPage } from "next";
-import Image from "next/image";
 
 type Timestamp = {
   nanoseconds: number;
@@ -46,10 +46,33 @@ const Post: NextPage<Props> = ({
       </div>
 
       {postImage && (
-        <div className="relative h-56 md:h-96 bg-white">
-          <Image src={postImage} alt={name} className="object-cover" fill />
+        <div className="relative h-56 md:h-full bg-white ">
+          {/* <Image
+            src={postImage}
+            alt={name}
+            className="w-full object-cover"
+            fill
+          /> */}
+          <img src={postImage} alt={name} className="w-full object-cover" />
         </div>
       )}
+
+      <div className="flex justify-between items-center rounded-b-2xl bg-white shadow-md text-gray-400 border-t">
+        <div className="inputIcon rounded-none rounded-bl-2xl">
+          <ThumbUpIcon className="h-4" />
+          <p className="text-xs sm:text-base">Like</p>
+        </div>
+
+        <div className="inputIcon rounded-none">
+          <ChatAltIcon className="h-4" />
+          <p className="text-xs sm:text-base">Comment</p>
+        </div>
+
+        <div className="inputIcon rounded-none rounded-br-2xl">
+          <ShareIcon className="h-4" />
+          <p className="text-xs sm:text-base">Share</p>
+        </div>
+      </div>
     </div>
   );
 };
