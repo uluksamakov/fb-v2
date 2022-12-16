@@ -9,7 +9,7 @@ const Posts: NextPage = () => {
 
   const filteredQuery = query(postsCollection, orderBy("timestamp", "desc"));
 
-  const [realtimePosts, loading, error] = useCollection(filteredQuery);
+  const [realtimePosts] = useCollection(filteredQuery);
 
   return (
     <div>
