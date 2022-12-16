@@ -1,6 +1,6 @@
 import type { GetServerSideProps, NextPage } from "next";
 import { getSession } from "next-auth/react";
-import { Feed, Header, Sidebar } from "../components";
+import { Feed, Header, Sidebar, Widgets } from "../components";
 import { Session } from "../utils/types/session";
 
 const Home: NextPage<Session> = ({ user }) => {
@@ -13,6 +13,7 @@ const Home: NextPage<Session> = ({ user }) => {
           <main className="flex">
             <Sidebar />
             <Feed />
+            <Widgets />
           </main>
         </div>
       )}
