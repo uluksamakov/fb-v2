@@ -8,6 +8,7 @@ const Home: NextPage<Session> = ({ user }) => {
     <>
       {user && (
         <div className="h-screen bg-gray-100 overflow-hidden">
+          {/* HEADER */}
           <Header />
           {/* MAIN CONTENTS */}
           <main className="flex">
