@@ -31,9 +31,9 @@ const InputBox: NextPage = () => {
 
     const post = {
       message: postMessage,
-      name: session?.user?.name,
-      email: session?.user?.email,
-      image: session?.user?.image,
+      name: session?.user?.name || null,
+      email: session?.user?.email || null,
+      image: session?.user?.image || null,
       timestamp: serverTimestamp(),
     };
 
@@ -54,7 +54,7 @@ const InputBox: NextPage = () => {
       removeImage();
     }
 
-    setPostMessage("")
+    setPostMessage("");
   };
 
   //add image
