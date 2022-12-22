@@ -76,7 +76,7 @@ const InputBox: NextPage = () => {
 
   return (
     <div className="bg-white p-2 rounded-2xl shadow-md text-gray-500 font-medium mt-6">
-      <div className="flex space-x4 p-4 items-center">
+      <div className="flex space-x-4 p-4 items-center">
         <Image
           className="rounded-full mr-3"
           src={session?.user?.image || "/"}

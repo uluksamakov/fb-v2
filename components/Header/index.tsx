@@ -61,7 +61,7 @@ const Header: NextPage = () => {
       </div>
 
       {/* MID */}
-      <div className="flex justify-center flex-grow">
+      <div className="hidden sm:flex justify-center flex-grow">
         <div className="flex space-x-6 md:space-x-2">
           {icons.map((icon, idx) => (
             <HeaderIcon Icon={icon.icon} active={icon.active} key={idx} />
