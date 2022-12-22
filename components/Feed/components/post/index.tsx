@@ -46,7 +46,7 @@ const Post: NextPage<Props> = ({
       </div>
 
       {postImage && (
-        <div className="relative h-56 md:h-full bg-white ">
+        <div className="relative h-full md:h-full bg-white">
           {/* <Image
             src={postImage}
             alt={name}

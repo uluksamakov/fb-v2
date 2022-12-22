@@ -52,7 +52,7 @@ const Sidebar: NextPage = () => {
   ];
 
   return (
-    <aside className="p-2 mt-5 max-w-[600px] xl:min-w-[300px]">
+    <aside className="hidden sm:block p-2 mt-5 max-w-[600px] xl:min-w-[300px]">
       {sideBarValues.map((item, idx) => (
         <SidebarRow
           Icon={item.icon}
